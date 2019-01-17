@@ -9,7 +9,7 @@ output_file=result_$(basename ${script_name} .sh)_$(date "+%Y%m%d-%H%M%S").txt
 cd ${script_dir}
 
 function check_var () {
-	echo ${1}: $(eval echo \${${1}})
+	echo "Variable check: ${1} = $(eval echo \${${1}})"
 }
 
 echo "${script_name} started at $(date -d @${start_time} +"%Y/%m/%d %T")"
