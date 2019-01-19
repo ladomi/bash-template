@@ -8,9 +8,7 @@ output_file=result_$(basename ${script_name} .sh)_$(date "+%Y%m%d-%H%M%S").txt
 
 cd ${script_dir}
 
-function check_var () {
-	echo "Variable check: ${1} = $(eval echo \${${1}})"
-}
+function check_var () { echo "Variable check: ${1} = $(eval echo \${${1}})"; }
 
 echo "${script_name} started at $(date -d @${start_time} +"%Y/%m/%d %T")"
 
@@ -20,10 +18,13 @@ check_var parent_dir
 
 echo "========================================"
 
-# your process
+# your process start
 
 
 
+# your process end
+
+echo "========================================"
 end_time=$(date +%s)
 elapsed_time=$(expr ${end_time} - ${start_time})
 echo "${script_name} ended at $(date -d @${end_time} +"%Y/%m/%d %T")"
