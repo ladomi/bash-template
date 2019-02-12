@@ -22,6 +22,7 @@ echo "========================================"
 
 # your process
 
+echo "elapsed time: $(expr $(date +%s) - ${start_time})"
 
 
 end_time=$(date +%s)
