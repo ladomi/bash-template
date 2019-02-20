@@ -39,4 +39,4 @@ commentout
 # utilities
 
 # format json
-cat file.json | python -c 'import sys,json;print(json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False))'
+# cat file.json | python -c 'import sys,json;print(json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False))'
